@@ -5,6 +5,7 @@ import { connect } from "react-redux";
 import IndexCard from "../components/IndexCards";
 // import Search from "../pages/Search";
 
+
 class Home extends Component {
   state = { loading: true };
   componentDidMount() {
@@ -51,7 +52,8 @@ class Home extends Component {
     };
     return (
       <Container text textAlign='center' style={{ padding: "10px 10px", textAlign: "center"}}>
-        <h2>Your Notecardz</h2>
+        <h2 >Your Notecardz</h2>
+        <div className="sub header">  ..</div>
         {/* <Search /> */}
         <Card.Group>{cards()}</Card.Group>
       </Container>

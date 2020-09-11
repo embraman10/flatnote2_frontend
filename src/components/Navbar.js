@@ -58,12 +58,14 @@ class Navbar extends Component {
     const loginButtons = (
       <Menu.Menu position="right">
         <Menu.Item
+        className="btn btn-outline-secondary navbar-brand"
           as={NavLink}
           to="/signup"
           name="signup"
           active={activeItem === "/signup"}
         />
         <Menu.Item 
+          className="btn btn-outline-secondary navbar-brand"
           as={NavLink}
           to="/login"
           name="login"
@@ -73,21 +75,24 @@ class Navbar extends Component {
     );
     const logoutButtons = (
       <Menu.Menu position="right">
-        <Menu.Item className="ui primary button" name="logout" onClick={this.clickLogout} />
+        <Menu.Item name="logout" onClick={this.clickLogout} />
       </Menu.Menu>
     );
 
     return (
-      <div id="navbar" className="ui inverted segment">
+      <div id="navbar" className="navbar-dark bg-primary">
         <Menu inverted secondary size="huge">
           <Menu.Item header>
-          <i className="pencil alternate icon"></i>
+          <div className="spinner">
+            <div className="dot1"></div>
+            <div className="dot2"></div>
+          </div>
           </Menu.Item>
-          <Menu.Item  className="navbar-brand">Flatbookz</Menu.Item>
-          <Menu.Item as={NavLink} to="/notes" name="home" active={activeItem === "/notes"}>
+          <Menu.Item >Flatbookz</Menu.Item>
+          <Menu.Item as={NavLink} className="navbar-brand" to="/notes" name="home" active={activeItem === "/notes"}>
             All Notez
           </Menu.Item>
-          <Menu.Item as={NavLink} to="/notes/new" name="new" active={activeItem === "/notes/new"}>
+          <Menu.Item as={NavLink} className="navbar-brand" to="/notes/new" name="new" active={activeItem === "/notes/new"}>
           New Notez
         </Menu.Item>
           {token ? logoutButtons : loginButtons}

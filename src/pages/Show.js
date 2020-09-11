@@ -22,7 +22,7 @@ class Show extends Component {
     const { notes } = this.props;
     const note = notes.find((note) => note.id === id);
     return (
-      <Container text>
+      <Container text className="segment centered padded piled center aligned">
         {note === undefined ? (
           <h2>You need to create some notez!</h2>
         ) : (

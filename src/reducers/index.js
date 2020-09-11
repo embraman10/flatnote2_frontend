@@ -1,15 +1,17 @@
 import { combineReducers } from "redux";
 import auth from "./auth";
-import notes from './notes'
+import notes from './notes';
+// import create from './notes/new';
 
 export default combineReducers({
   auth: auth,
-  notes: notes
+  notes: notes,
+  // create: create
 });
 
-export const handleSearch = (input) => {
-  return {
-    type: 'HANDLE_SEARCH',
-    input: input
-  }
-}
+// export const handleSearch = (input) => {
+//   return {
+//     type: 'HANDLE_SEARCH',
+//     input: input
+//   }
+// }

@@ -142,3 +142,8 @@ body {
     transform-origin: 50% 50%;
   }
 
+  .col-xs-6 {
+    flex-basis: 50%;
+  }
+
+  
