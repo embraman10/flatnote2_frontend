@@ -4,7 +4,7 @@ import { Button, Card} from "semantic-ui-react";
 const IndexCards = (props) => {
   const { id, title, contents } = props.note;
   return (
-    <Card>
+    <Card className="segment centered padded">
       <Card.Content>
         <Card.Header>{title}</Card.Header>
         <Card.Description>{contents}</Card.Description>

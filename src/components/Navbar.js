@@ -81,10 +81,7 @@ class Navbar extends Component {
       <div id="navbar" className="ui inverted segment">
         <Menu inverted secondary size="huge">
           <Menu.Item header>
-            <div className="spinner">
-                <div className="dot1"></div>
-                <div className="dot2"></div>
-              </div>
+          <i className="pencil alternate icon"></i>
           </Menu.Item>
           <Menu.Item  className="navbar-brand">Flatbookz</Menu.Item>
           <Menu.Item as={NavLink} to="/notes" name="home" active={activeItem === "/notes"}>
